@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
-import { FileSpreadsheet, Copy, Trash } from 'lucide-react';
+import { FileSpreadsheet, Trash } from 'lucide-react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import EquityPDFReport from './EquityPDFReport';
 
