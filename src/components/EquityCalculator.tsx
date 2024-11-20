@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
-import { Download, Save, FileSpreadsheet, Copy, Trash } from 'lucide-react';
+import { FileSpreadsheet, Copy, Trash } from 'lucide-react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import EquityPDFReport from './EquityPDFReport'; // Ensure this path is correct
+import EquityPDFReport from './EquityPDFReport';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'];
 
@@ -231,7 +231,7 @@ const EquityCalculator = () => {
                   <button
                     className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center gap-2"
                   >
-                    <Download className="w-4 h-4" /> Export PDF
+                    <FileSpreadsheet className="w-4 h-4" /> Export PDF
                   </button>
                 )
               }
@@ -241,13 +241,13 @@ const EquityCalculator = () => {
             onClick={saveScenario}
             className="p-2 bg-purple-500 text-white rounded hover:bg-purple-600 flex items-center gap-2"
           >
-            <Save className="w-4 h-4" /> Save Scenario
+            <FileSpreadsheet className="w-4 h-4" /> Save Scenario
           </button>
           <button
             onClick={copyToClipboard}
             className="p-2 bg-gray-500 text-white rounded hover:bg-gray-600 flex items-center gap-2"
           >
-            <Copy className="w-4 h-4" /> Copy
+            <FileSpreadsheet className="w-4 h-4" /> Copy
           </button>
         </div>
       </div>
