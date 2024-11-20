@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
-import { FileSpreadsheet, Copy, Trash } from 'lucide-react';
+import { FileSpreadsheet, Trash } from 'lucide-react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import EquityPDFReport from './EquityPDFReport';
 
@@ -158,13 +158,6 @@ const EquityCalculator = () => {
     setFutureFunding(scenario.futureFunding);
     setScenarioName(scenario.name);
     setChartData(scenario.chartData);
-  };
-
-  const copyToClipboard = () => {
-    const textData = chartData.map(item => 
-      `${item.name}: ${item.value}%`
-    ).join('\n');
-    navigator.clipboard.writeText(textData);
   };
 
   const addCustomPointCategory = () => {
