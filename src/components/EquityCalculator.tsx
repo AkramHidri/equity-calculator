@@ -235,12 +235,6 @@ const EquityCalculator = () => {
           >
             <FileSpreadsheet className="w-4 h-4" /> Save Scenario
           </button>
-          <button
-            onClick={copyToClipboard}
-            className="p-2 bg-gray-500 text-white rounded hover:bg-gray-600 flex items-center gap-2"
-          >
-            <Copy className="w-4 h-4" /> Copy
-          </button>
         </div>
       </div>
 
