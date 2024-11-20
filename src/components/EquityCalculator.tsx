@@ -195,45 +195,46 @@ const EquityCalculator = () => {
           />
         </div>
         <div className="flex gap-2">
-  <button
-    onClick={exportToCSV}
-    className="p-2 bg-green-500 text-white rounded hover:bg-green-600 flex items-center gap-2"
-  >
-    <FileSpreadsheet className="w-4 h-4" /> Export CSV
-  </button>
-  {isClient && (
-    <PDFDownloadLink
-      document={
-        <EquityPDFReport
-          scenarioName={scenarioName}
-          members={members}
-          chartData={chartData}
-          optionPool={optionPool}
-          startupName={startupName}
-          startupDescription={startupDescription}
-          yearOfFunding={yearOfFunding}
-          fundingStage={fundingStage}
-          logoUrl={logoUrl}
-        />
-      }
-      fileName={`equity_split_${scenarioName.replace(/\s+/g, '_')}.pdf`}
-    >
-      {({ loading }) =>
-        loading ? 'Loading document...' : (
-          <button className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center gap-2">
-            <FileSpreadsheet className="w-4 h-4" /> Export PDF
+          <button
+            onClick={exportToCSV}
+            className="p-2 bg-green-500 text-white rounded hover:bg-green-600 flex items-center gap-2"
+          >
+            <FileSpreadsheet className="w-4 h-4" /> Export CSV
           </button>
-        )
-      }
-    </PDFDownloadLink>
-  )}
-  <button
-    onClick={saveScenario}
-    className="p-2 bg-purple-500 text-white rounded hover:bg-purple-600 flex items-center gap-2"
-  >
-    <FileSpreadsheet className="w-4 h-4" /> Save Scenario
-  </button>
-</div>
+          {isClient && (
+            <PDFDownloadLink
+              document={
+                <EquityPDFReport
+                  scenarioName={scenarioName}
+                  members={members}
+                  chartData={chartData}
+                  optionPool={optionPool}
+                  startupName={startupName}
+                  startupDescription={startupDescription}
+                  yearOfFunding={yearOfFunding}
+                  fundingStage={fundingStage}
+                  logoUrl={logoUrl}
+                />
+              }
+              fileName={`equity_split_${scenarioName.replace(/\s+/g, '_')}.pdf`}
+            >
+              {({ loading }) =>
+                loading ? 'Loading document...' : (
+                  <button className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center gap-2">
+                    <FileSpreadsheet className="w-4 h-4" /> Export PDF
+                  </button>
+                )
+              }
+            </PDFDownloadLink>
+          )}
+          <button
+            onClick={saveScenario}
+            className="p-2 bg-purple-500 text-white rounded hover:bg-purple-600 flex items-center gap-2"
+          >
+            <FileSpreadsheet className="w-4 h-4" /> Save Scenario
+          </button>
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-6">
