@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
+import { FileSpreadsheet, Copy, Trash } from 'lucide-react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import EquityPDFReport from './EquityPDFReport';
 
@@ -163,7 +164,6 @@ const EquityCalculator = () => {
     const textData = chartData.map(item => 
       `${item.name}: ${item.value}%`
     ).join('\n');
-    
     navigator.clipboard.writeText(textData);
   };
 
@@ -246,7 +246,7 @@ const EquityCalculator = () => {
             onClick={copyToClipboard}
             className="p-2 bg-gray-500 text-white rounded hover:bg-gray-600 flex items-center gap-2"
           >
-            <FileSpreadsheet className="w-4 h-4" /> Copy
+            <Copy className="w-4 h-4" /> Copy
           </button>
         </div>
       </div>
