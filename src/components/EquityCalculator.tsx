@@ -45,7 +45,7 @@ interface SavedScenario {
   chartData: ChartDataItem[];
 }
 
-const EquityCalculator = () => {
+const EquityCalculator: React.FC = () => {
   const [members, setMembers] = useState<Member[]>([
     { 
       role: 'CEO', 
